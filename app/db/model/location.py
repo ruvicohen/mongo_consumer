@@ -1,8 +1,6 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
-
-@dataclass
-class Location:
+class Location(BaseModel):
     region: str
     country: str
     city: str

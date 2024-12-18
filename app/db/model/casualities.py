@@ -1,7 +1,5 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
-
-@dataclass
-class Casualties:
+class Casualties(BaseModel):
     fatalities: int
     injuries: int

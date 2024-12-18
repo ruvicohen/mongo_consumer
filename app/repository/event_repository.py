@@ -1,7 +1,7 @@
 from app.db.mongo_database import terror_events
+from app.service.event_service import convert_to_mongo_compatible
 
 
-def save_to_mongo(events):
-    documents = [event.__dict__ for event in events]
-    terror_events.insert_many(documents)
-    print(f"{len(events)} events saved to MongoDB.")
+def save_to_mongo(event):
+    event_dict = convert_to_mongo_compatible(event.dict())
+    terror_events.insert_one(event_dict)
