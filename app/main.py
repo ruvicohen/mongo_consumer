@@ -6,5 +6,5 @@ load_dotenv(verbose=True)
 
 mongo_topic = os.environ["MONGO_TOPIC"]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     consume_topic(mongo_topic, print)

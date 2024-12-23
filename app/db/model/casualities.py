@@ -1,5 +1,8 @@
 from pydantic import BaseModel
+from typing import Optional
+
 
 class Casualties(BaseModel):
-    fatalities: int
-    injuries: int
+    fatalities: Optional[int]
+    injuries: Optional[int]
+    score: Optional[int]

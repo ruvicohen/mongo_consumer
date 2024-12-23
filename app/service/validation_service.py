@@ -1,5 +1,4 @@
 from pydantic import ValidationError
-
 from app.db.model.event import Event
 
 
